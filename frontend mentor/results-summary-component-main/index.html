@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Results summary component by Caleb Arodu</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <p class="heading">Your Result</p>
+        <div class="score">
+          <h1 class="total">0</h1>
+          <p>of 100</p>
+        </div>
+        <div class="remark">
+          <h2 class="title">Great</h2>
+          <p class="say">
+            Remarks<br />
+            ⚡
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="summary">Summary</h2>
+        <div class="content">
+          <ul>
+            <li class="reaction">
+              <img
+                src="./assets/images/icon-reaction.svg"
+                alt="reaction icon"
+              /><span class="text red">Reaction</span
+              ><span class="mark">
+                <input type="number" class="value" />
+                <span class="faint">/ 100</span></span
+              >
+            </li>
+            <li class="memory">
+              <img
+                src="./assets/images/icon-memory.svg"
+                alt="memory icon"
+              /><span class="text orange">Memory</span
+              ><span class="mark">
+                <input type="number" class="value" />
+                <span class="faint">/ 100</span></span
+              >
+            </li>
+            <li class="verbal">
+              <img
+                src="./assets/images/icon-verbal.svg"
+                alt="Verbal icon"
+              /><span class="text green">Verbal</span
+              ><span class="mark">
+                <input type="number" class="value" />
+                <span class="faint">/ 100</span></span
+              >
+            </li>
+            <li class="visual">
+              <img
+                src="./assets/images/icon-visual.svg"
+                alt="Visual icon"
+              /><span class="text blue">Visual</span
+              ><span class="mark">
+                <input type="number" class="value" />
+                <span class="faint">/ 100</span></span
+              >
+            </li>
+          </ul>
+        </div>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

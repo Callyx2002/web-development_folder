@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        .container {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        p.test::first-letter {
+            font-weight: 600;
+            font-size: 20px;
+            font-style: italic;
+            color: brown;
+        }
+
+        .drop {
+            display: none
+        }
+
+        ul {
+            list-style-type: none;
+            width: 100px;
+            background: beige;
+            text-align: center;
+            display: block;
+        }
+
+        li a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            padding: 5px;
+        }
+        
+        a:hover {
+            background: darkcyan;
+        }
+        li  {
+            text-align: center;
+        }
+
+        .act {
+            background: green;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid aliceblue;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .container:hover .drop {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <p class="test">This is me trying to show the dropdown property using class</p>
+    <div class="container">
+        <button class="act">Dropdown</button>
+        <div class="drop">
+            <ul>
+            <li class="one"><a href="#">Home</a></li>
+            <li class="two"><a href="#">Content</a></li>
+            <li class="three"><a href="#">About Us</a></li>
+            <li class="three"><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

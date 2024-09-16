@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --main-font: "Manrope", sans-serif;
+}
+
+body {
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  font-family: var(--main-font);
+  font-weight: 800;
+  height: 100vh;
+}
+/* .main__container {
+  height: 50vh;
+  
+} */
+.advice__container {
+  background: var(--dark-grayish-blue);
+  padding: 2rem 1rem 5rem;
+  text-align: center;
+  border-radius: 1rem;
+  /* margin-top: rem; */
+}
+.advice__header {
+  font-size: 1rem;
+  color: var(--neon-green);
+  margin-bottom: 1.5rem;
+}
+.advice__content {
+  margin-bottom: 2rem;
+  font-size: 28px;
+  color: var(--light-cyan);
+}
+
+.dice__container {
+  background-color: var(--neon-green);
+  padding: 1rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  outline: none;
+  margin-top: -2rem;
+}
+.dice__container:hover {
+  box-shadow: 0 0 50px 3px var(--neon-green);
+}
+.dice path {
+  fill: var(--dark-blue);
+}
+.divider {
+  background-image: url("./images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 450px) {
+  .main__container {
+    width: 50vw;
+  }
+  .divider {
+    background-image: url("./images/pattern-divider-desktop.svg");
+  }
+}

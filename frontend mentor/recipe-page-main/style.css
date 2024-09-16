@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek:wght@900&family=Outfit:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek:wght@900&family=Outfit:wght@400&family=Young+Serif&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(330, 100%, 98%);
+  color: hsl(24, 5%, 18%);
+}
+
+/* Styling the container */
+.container {
+  background: hsl(0, 0%, 100%);
+  width: 50%;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: 4rem 0;
+}
+.container h1 {
+  font-weight: 500;
+  font-family: "Young Serif", serif;
+  font-size: 2rem;
+}
+.container img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.father {
+  font-weight: 700;
+}
+.container p {
+  margin-bottom: 1.5rem;
+}
+
+/* styling the preparation time */
+.preparation-time {
+  background: hsl(330, 100%, 98%);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+.preparation-time p {
+  margin-left: 1rem;
+  font-weight: 600;
+  color: hsl(14, 45%, 36%);
+}
+.preparation-time ul li {
+  margin-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Styling the respective h2s */
+h2 {
+  font-weight: 500;
+  color: hsl(14, 45%, 36%);
+  font-family: "Young Serif", serif;
+  font-size: 2rem;
+}
+
+/* Styling the ingredients section */
+.ingredients {
+  border-bottom: 0.1rem solid hsl(30, 54%, 90%);
+}
+.ingredients ul {
+  margin-left: -1rem;
+}
+.ingredients ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Styling the instructions part 
+*/
+.instructions {
+  border-bottom: 0.1rem solid hsl(30, 18%, 87%);
+}
+.instructions ol {
+  margin-left: -1rem;
+  list-style: none;
+  counter-reset: item;
+}
+.instructions ol li {
+  counter-increment: item;
+  margin-bottom: 1rem;
+}
+.instructions ol li::before {
+  text-align: center;
+  display: inline-block;
+  content: counter(item);
+  color: hsl(14, 45%, 36%);
+  margin-right: 0.8rem;
+  font-weight: 600;
+  margin-left: -1.5rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: 0.8rem;
+}
+tr {
+  border-bottom: 0.1rem solid hsl(30, 18%, 87%);
+}
+tr:last-child {
+  border-bottom: none;
+}
+.brown {
+  font-weight: 600;
+  color: hsl(14, 45%, 36%);
+}
+
+/* For small screens */
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    border-radius: none;
+    margin: 0;
+    border-radius: 0;
+  }
+  body {
+    background: hsl(0, 0%, 100%);
+  }
+}

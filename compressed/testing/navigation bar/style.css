@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  --body-color: #e4e9f9;
+  --nav-color: #4070f4;
+  --side-nav: #010718;
+  --text-color: #fff;
+  --search-bar: #f2f2f2;
+  --search-text: #010718;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--body-color);
+}
+.header {
+  background-color: var(--nav-color);
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  align-items: center;
+  gap: 2rem;
+  height: 10vh;
+  /* margin: 0; */
+}
+.header .list {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+}
+.list__item {
+  /* justify-self: center; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* display: block; */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-inline-end: 2rem;
+}
+.list__item a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: none;
+  /* display: block; */
+}
+.list__item a:hover {
+  color: var(--side-nav);
+}
+.header__heading {
+  font-weight: 600;
+  color: var(--body-color);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+  display: none;
+}
+.close {
+  display: none;
+}
+.close g path,
+.menu path {
+  fill: var(--text-color);
+  /* display: none; */
+}
+.remain {
+  height: 90vh;
+}
+@media (max-width: 915px) {
+  .header {
+    grid-template-columns: 34px 6fr;
+  }
+  .header__heading {
+    text-align: center;
+  }
+  .list {
+    position: absolute;
+    top: 10vh;
+    left: -100%;
+    height: 50vh;
+    width: 30vw;
+    transition: left 0.2s linear;
+    background: var(--nav-color);
+    flex-direction: column;
+    /* justify-content: space-arousnd; */
+    /* height: 50%; */
+    align-items: flex-start;
+
+    /* padding: 0; */
+  }
+  .list__item {
+    margin: 2rem 4rem;
+  }
+  .menu {
+    display: block;
+  }
+  .menu__hide {
+    display: none;
+  }
+  .menu,
+  .close {
+    cursor: pointer;
+  }
+  .close__visible {
+    display: block;
+  }
+  .list__visible {
+    left: 0;
+  }
+  .body--no--scroll {
+    overflow: hidden;
+  }
+}

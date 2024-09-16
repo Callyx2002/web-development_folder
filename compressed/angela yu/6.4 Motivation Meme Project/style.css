@@ -1,0 +1,20 @@
+html {
+    background-color: black;
+  }
+  img {
+    border: 5px solid white;
+    width: 100%;
+  }
+  p,
+  h1 {
+    text-align: center;
+    color: bisque !important;
+    color: white;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  div {
+    width: 50%;
+    margin-left: 25%;
+  }

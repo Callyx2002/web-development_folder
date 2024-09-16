@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ::selection {
+        background-color: aquamarine;
+        color: crimson;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        cursor: -moz-grabbing;
+      }
+      p {
+        display: none;
+        background: yellow;
+        border: 2px solid brown;
+      }
+
+      p::first-line {
+        text-decoration: underline;
+        font-family: cursive;
+        color: rgba(47, 25, 25, 0.2);
+        text-transform: capitalize;
+      }
+
+      div::first-letter {
+        font-weight: 600;
+        font-size: large;
+        text-decoration: solid;
+        color: brown;
+        font-family: sans-serif;
+      }
+
+      div:hover p {
+        display: block;
+      }
+
+      input:checked {
+        width: 40px;
+        height: 50px;
+        color: brown;
+        background: cornflowerblue;
+      }
+
+      img {
+        width: 50%;
+        margin: auto;
+        display: block;
+        opacity: 0.5;
+        border-radius: 10%;
+      }
+
+      img:hover {
+        opacity: 1;
+      }
+
+      ul {
+        list-style-type: none;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        background-color: gray;
+        border: 2px solid;
+        height: 100%;
+        position: fixed;
+        width: 25%;
+        
+      }
+
+      li {
+        border-bottom: 2px solid;
+        text-align: center;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      li a {
+        /* display: inline-block; */
+        text-decoration: none;
+      }
+
+      li:hover, a:hover {
+        background: black;
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .lorem {
+        margin-left: 25%;
+        padding: 1px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Hover over me to show the p element
+      <p>
+        Tada! here am I <br />Once again by the grace of our Lord Jesus Christ
+      </p>
+    </div>
+    <form action="#">
+      <input type="radio" checked="checked" value="male" name="gender" />
+      Male<br />
+      <input type="radio" value="female" name="gender" /> Female<br />
+      <input type="checkbox" value="Bike" /> I have a bike<br />
+      <input type="checkbox" value="Car" checked /> I have a car
+    </form>
+    <img src="../10.2 Grid Placement/goal3.png" alt="a smiley emoji on hats" />
+    <a href="../10.3 Mondrian Project/index.html">Homepage</a>
+    <ul>
+        <li><a href="#one">Home</a></li>
+        <li><a href="#one">About Us</a></li>
+        <li><a href="#one">Contact Us</a></li>
+        <li><a href="#one">Feedback</a></li>
+    </ul>
+    <div class="lorem">
+        <h2>Fixed Full-height Side Nav</h2>
+        <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+    </div>
+  </body>
+</html>

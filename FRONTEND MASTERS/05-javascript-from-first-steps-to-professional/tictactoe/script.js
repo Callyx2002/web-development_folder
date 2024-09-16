@@ -1,0 +1,16 @@
+const firstPlayer = document.getElementById("p1-name");
+const secondPlayer = document.getElementById("p2-name");
+const firstSymbol = document.getElementById("p1-symbol");
+const secondSymbol = document.getElementById("p2-symbol");
+const description = document.querySelector("h2");
+const heading = document.querySelector("h1");
+firstPlayer.textContent = "Caleb";
+secondPlayer.textContent = "Success";
+// firstSymbol.textContent = "O";
+// secondSymbol.textContent = "X";
+description.append(" and Love");
+// console.log(firstPlayer);
+firstPlayer.append(" Arodu");
+heading.textContent = heading.textContent.toUpperCase();
+console.log(document.title.toLowerCase().indexOf("t"));
+console.log(document.title.toLowerCase().includes("javascript"));

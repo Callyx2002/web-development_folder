@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Coffee Shop</title>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <img src="./coffee_masters_logo.png" alt="coffee masters logo" />
+      <h1>Coffee Masters</h1>
+    </nav>
+    <div class="main-page">
+      <section class="order box">
+        <h2 class="box-title">ITEMS</h2>
+        <ul class="items">
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Cappuccino</div>
+            <div class="item-price">$3.35</div>
+            <ul class="item-option-list">
+              <li class="item-option">Lite foam</li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Cappuccino</div>
+            <div class="item-price">$3.85</div>
+            <ul class="item-option-list">
+              <li class="item-option">Lite Milk</li>
+              <li class="item-option">Double espresso</li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-title">Croissabt</div>
+            <div class="item-price">$2.45</div>
+            <ul class="item-option-list">
+              <li class="item-option">Butter</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="payment">
+        <div class="name-box box">
+          <h2 class="box-title">NAME</h2>
+          <div class="input-group">
+            <label class="user-input-label" for="name">Name for order</label>
+            <input type="text" class="user-input" id="name" />
+          </div>
+        </div>
+        <div class="cc-box box">
+          <h2 class="box-title">PAYMENT</h2>
+          <div class="input-group">
+            <label class="user-input-label" for="cc">Name for order</label>
+            <input type="text" class="user-input" id="cc" />
+          </div>
+          <div class="input-group">
+            <label class="user-input-label" for="ccv">CCV Number</label>
+            <input type="text" class="user-input" id="ccv" />
+          </div>
+        </div>
+      </section>
+      <section class="total">
+        <table class="totals-table">
+          <tr>
+            <td>Subtotal:</td>
+            <td>$19.54</td>
+          </tr>
+          <tr>
+            <td>Tax:</td>
+            <td>$1.54</td>
+          </tr>
+          <tr class="bold">
+            <td>Total:</td>
+            <td>$21.54</td>
+          </tr>
+        </table>
+        <button class="checkout">Place order</button>
+      </section>
+    </div>
+  </body>
+</html>

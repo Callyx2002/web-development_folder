@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      * {
+        margin: 10px;
+      }
+      fieldset {
+        background-color: aquamarine;
+        border-radius: 5%;
+      }
+
+      fieldset:hover {
+        background-color: beige;
+      }
+
+      #submit {
+        color: burlywood;
+        background-color: cadetblue;
+        border: 1px solid;
+        border-radius: 25%;
+      }
+
+      #submit:hover {
+        color: darkmagenta;
+        background-color: grey;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="www.google.com" target="_blank" method="post">
+        <fieldset>
+          <legend>Login Details</legend>
+          Username:
+          <input type="text" name="Username" placeholder="Username" />
+          <br />
+          Password:
+          <input type="password" name="password" placeholder="Password" />
+          <br />
+          Enter a valid email:
+          <input type="email" name="email" validate />
+          <br />
+          Enter a date of birth:
+          <input type="date" name="" max="2000-2-23" />
+          <br />
+          Enter date of registration:
+          <input type="date" name="" min="1900-2-23" />
+          <br />
+          Upload your valid National Identification Card:
+          <input type="file" name="myfile" multiple/>
+          <br />
+          <input type="reset" value="Reset" />
+          <br />
+          <input type="search" name="google search" placeholder="search here"/>
+          <input type="submit" value="Submit" />
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="gender" value="male" checked />Male
+          <br />
+          <input type="radio" name="gender" value="female" />Female
+          <br />
+          <input type="submit" value="submit" id="submit" />
+          <select name="option" multiple size="2">
+            <option value="david">David</option>
+            <option value="caleb" selected>Caleb</option>
+            <option value="musa">Musa</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <textarea name="comment" placeholder="Enter text here"></textarea>
+          <button type="reset" onclick="alert('Reset Complete')">
+            Click Me!
+          </button>
+        </fieldset>
+        <fieldset>
+          <form action="www.google.com">
+            <input list="browser" />
+            <datalist id="browser">
+              <option value="safari"></option>
+              <option value="chrome"></option>
+              <option value="bing"></option>
+            </datalist>
+          </form>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

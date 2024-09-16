@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Italic Worksans";
+  src: url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Normal Worksans";
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Normal Worksans";
+  background: url(./assets/images/background-pattern-mobile.svg),
+    var(--light-pink);
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+}
+.container {
+  background: var(--white);
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 1rem;
+  box-shadow: -3px 3px 3px var(--light-pink);
+}
+.header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.main__content:not(.main__content:last-of-type) {
+  border-bottom: 3px solid var(--light-pink);
+}
+.content__heading {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  gap: 2rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+.main__content--question {
+  font-size: 16px;
+  font-weight: 700;
+}
+.main__content--question:hover {
+  color: #ad28eb;
+  cursor: pointer;
+}
+.main__content--answer {
+  font-size: 16px;
+  color: var(--grayish-purple);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  display: none;
+}
+.minus:hover,
+.plus:hover {
+  cursor: pointer;
+}
+.minus,
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+
+@media (min-width: 390px) {
+  body {
+    background: url(./assets/images/background-pattern-desktop.svg),
+      var(--light-pink);
+    background-position: top bottom;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+  .container {
+    width: 40%;
+    margin-top: 7rem;
+  }
+}
+@media (min-width: 390px) and (max-width: 730px) {
+  /* body {
+    background: url(./assets/images/background-pattern-desktop.svg),
+      var(--light-pink);
+    background-position: top bottom;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  } */
+  .container {
+    width: 70%;
+  }
+}

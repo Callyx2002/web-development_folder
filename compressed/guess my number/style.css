@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Outfit:wght@100..900&family=Roboto&display=swap");
+
+* {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: white;
+}
+
+.header,
+.main {
+  background: linear-gradient(to bottom right, red, orange);
+  background-size: cover;
+  background-position: center;
+}
+/* ************************************************* */
+/* HEADER SECTION */
+.header {
+  height: 40vh;
+  border: 0.3rem solid white;
+  border-radius: 0 0 2rem 2rem;
+  position: relative;
+}
+.header h1 {
+  font-size: 3rem;
+  position: absolute;
+  top: 4rem;
+  left: 30%;
+}
+.header p {
+  position: absolute;
+  right: 0;
+  font-size: 1.7rem;
+}
+.header button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 0 1rem 1rem;
+  /* border: none; */
+  outline: none;
+}
+.header .guess {
+  background: beige;
+  width: 5rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 13.5rem;
+  left: 45%;
+}
+
+/* *************************************** */
+/* MAIN SECTION */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 3rem;
+  border-radius: 2rem;
+  border: 0.3rem solid white;
+}
+
+.first,
+.second {
+  width: 100%;
+  margin-left: 20%;
+}
+
+.first p {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.first input {
+  /* height: 4rem; */
+  /* /* flex-basis: 15%; */
+  width: 60%;
+  border-radius: 1.4rem;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+
+.second p {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
