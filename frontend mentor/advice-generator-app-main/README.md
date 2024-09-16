@@ -28,12 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![My screenshot](./screenshot.jpg)
 
 ### Links
 
 - Live Site URL: [Random advice generator app](https://your-live-site-url.com)
-
 
 ### Built with
 
