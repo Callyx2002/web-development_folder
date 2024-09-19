@@ -82,7 +82,7 @@ body {
     position: absolute;
     top: 10vh;
     left: -100%;
-    height: 50vh;
+    /* height: 50vh; */
     width: 30vw;
     transition: left 0.2s linear;
     background: var(--nav-color);
