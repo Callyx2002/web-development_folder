@@ -1,0 +1,370 @@
+@layer base {
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --sky-blue: hsl(202, 86%, 94%);
+    --very-light-blue: hsl(203, 41%, 72%);
+    --light-blue: hsl(200, 26%, 54%);
+    --blue: hsl(200, 24%, 40%);
+    --very-dark-blue: hsl(202, 55%, 16%);
+    --deep-blue: hsl(202, 55%, 10%);
+    --lime: hsl(61, 70%, 52%);
+    --light-lime: hsla(61, 81%, 90%, 0.4);
+    --red: hsl(4, 69%, 50%);
+    --paragraph: 16px;
+    --site-font: "Plus Jakarta Sans", sans-serif;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--sky-blue);
+    font-family: var(--site-font);
+    font-size: var(--paragraph);
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 60vw;
+    border-radius: 1rem;
+    /* max-height: 60vh; might alter this later */
+    background: var(--white);
+  }
+}
+@layer calculator {
+  .calculator {
+    padding: 2em;
+  }
+  .calculator header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    color: var(--very-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  header p {
+    text-decoration: underline;
+    color: var(--light-blue);
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  header p:hover {
+    text-decoration: none;
+  }
+  form .fields {
+    display: grid;
+    grid-template-areas: "amount amount" "term rate";
+    gap: 1rem;
+  }
+  .fields .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fields,
+  .input-field:first-child {
+    grid-area: amount;
+  }
+  .fields .input-field label,
+  p {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  .params {
+    border: 1px solid var(--light-blue);
+  }
+  .fields .input-field input {
+    padding: 0.5rem;
+
+    /* border: none; */
+    font-weight: 700;
+    font-size: var(--paragraph);
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-right: none;
+    color: var(--very-dark-blue);
+    /* outline: ; */
+  }
+  .fields .input-field input:focus {
+    outline: none;
+    border: 1px solid var(--lime);
+  }
+  .input-field input:focus + span {
+    background-color: var(--lime);
+    color: var(--very-dark-blue);
+    border: 1px solid var(--lime);
+  }
+
+  /* .fields .input-field input:focus + .input-field span {
+    background-color: var(--lime);
+  } */
+  .input-field div {
+    display: flex;
+    /* align-items: center; */
+    /* border: 1px solid var(--very-light-blue); */
+    /* border-radius: 5px; */
+  }
+
+  .indicator {
+    background-color: var(--sky-blue);
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    padding: 0.7rem;
+    font-weight: 700;
+    color: var(--light-blue);
+    font-size: 0.8rem;
+    border: 1px solid var(--light-blue);
+    border-left: none;
+    cursor: pointer;
+  }
+  #pound span {
+    order: -1;
+    border-left: 1px solid var(--light-blue);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+  }
+  #pound input {
+    border-right: 1px solid var(--light-blue);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+  }
+  #pound input:focus + span,
+  #pound input:focus {
+    border: 1px solid var(--lime);
+  }
+
+  /* copied from w3schools */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  form p {
+    margin: 1rem 0 0.5rem;
+  }
+  fieldset {
+    border: none;
+  }
+  .choices {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-blue);
+    font-weight: 700;
+    /* background: var(--light-lime); */
+    display: flex;
+    align-items: center;
+  }
+  .choices label {
+    margin-left: 0.5rem;
+    color: var(--very-dark-blue);
+  }
+  input[type="radio"] {
+    accent-color: var(--lime);
+    background: var(--white);
+  }
+  .choices:hover {
+    border: 1px solid var(--lime);
+    /* background: var(--light-lime); */
+    cursor: pointer;
+  }
+  .choices label:hover,
+  .choices input:hover {
+    cursor: pointer;
+  }
+  .choices:focus {
+    background-color: 1px solid var(--light-lime);
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--lime);
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    font-size: 0.9rem;
+  }
+  button:hover {
+    background: var(--light-lime);
+    cursor: pointer;
+  }
+}
+@layer illustration {
+  .illustration {
+    background: var(--very-dark-blue);
+    border-radius: 0 1rem 1rem 4rem;
+  }
+  .illustration .first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    /* gap: 1rem; */
+  }
+  .illustration .first svg {
+    width: 90%;
+    height: 90%;
+  }
+  .illustration h2 {
+    margin-top: -1rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .illustration p {
+    text-align: center;
+    max-width: 80%;
+    color: var(--light-blue);
+    font-weight: 500;
+  }
+  .illustration .second {
+    padding: 3rem 2rem;
+    display: none;
+    /* position: relative;
+    right: -1000%;
+    transition: right 1s ease; */
+  }
+  .second p {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .second .result {
+    background: var(--deep-blue);
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+    border-top: 3px solid var(--lime);
+  }
+  .second h3 {
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-blue);
+    color: var(--lime);
+    font-size: 2rem;
+  }
+  .second h4 {
+    margin-top: -1rem;
+    font-size: var(--paragraph);
+    color: var(--white);
+  }
+}
+@layer mediaquery {
+  @media (max-width: 1100px) {
+    /* header {
+      flex-direction: column;
+      justify-content: left;
+      align-items: self-start;
+    }
+    header p {
+      margin-top: 0.5rem;
+    } */
+    .container {
+      max-width: 70vw;
+    }
+  }
+  @media (max-width: 900px) {
+    .container {
+      max-width: 90vw;
+    }
+  }
+  @media (max-width: 760px) {
+    body {
+      height: unset;
+    }
+    .container {
+      max-width: 100vw;
+      grid-template-columns: 1fr;
+      margin: 2rem;
+    }
+    .illustration {
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .fields {
+      grid-template-areas: "amount" "term" "rate";
+    }
+  }
+  @media (max-width: 430px) {
+    .container {
+      margin: 0;
+      /* padding: 1rem; */
+    }
+    .calculator header {
+      flex-direction: column;
+      /* justify-content: start; */
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+  }
+}
+@layer javascript {
+  .hidden {
+    /* position: absolute;
+    right: -1000%;
+    transition: display 2s ease; */
+    display: none;
+  }
+  .shown {
+    /* position: absolute; */
+    display: block;
+    /* position: relative;
+    right: 0;
+    transition: position 2s ease; */
+  }
+  .checked {
+    background: var(--light-lime);
+    border: 1px solid var(--lime);
+  }
+  .not-valid {
+    color: var(--red);
+    font-size: 0.6rem;
+    margin-top: -0.2rem;
+  }
+
+  .invalid-input {
+    outline: none;
+    border: 1px solid var(--red);
+  }
+  .redBg {
+    background: var(--red);
+    border: 1px solid var(--red);
+    color: var(--white);
+  }
+}

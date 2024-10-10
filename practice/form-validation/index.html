@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <select id="cities" multiple>
+      <option value="JAI" selected>Jaipur</option>
+      <option value="DEL">New Delhi</option>
+      <option value="UDR">Udaipur</option>
+      <option value="MUM">Mumbai</option>
+  </select>
+<button id="btn">Click me</button>
+  <script>
+    const btn = document.querySelector("#btn");
+      const selectElement = document.getElementById("cities");
+      btn.onclick = (event) => {
+        event.preventDefault();
+        const selectedCity =
+          selectElement.options[selectElement.selectedIndex].text;
+        alert(`Selected city: ${selectedCity}, 
+        Index: ${selectElement.selectedIndex}`);
+      };
+</script>
+</body>
+</body>
+  </body>
+</html>
