@@ -83,11 +83,26 @@ a:visited {
 .workout--cycling {
   border-left: 5px solid var(--color-brand--1);
 }
-
+.workout svg {
+  height: 1.7rem;
+  width: 1.7rem;
+  fill: var(--color-light--2);
+}
 .workout__title {
-  font-size: 1.7rem;
   font-weight: 600;
   grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.workout__title div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.workout__title h2 {
+  font-size: 1.7rem;
 }
 
 .workout__details {

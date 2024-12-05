@@ -27,9 +27,13 @@ function validatorText(element) {
 
 //focus using indicators
 function focusText() {
-  for (let i = 0; i < indicator.length; i++) {
-    indicator[i].addEventListener("click", () => {
+  for (let i = 0; i < smallerField.length; i++) {
+    smallerField[i].addEventListener("click", () => {
       inputText[i].focus();
+      if (inputField[i].lastElementChild.tagName.toLowerCase() === "p") {
+        inputField[i].removeChild(inputField[i].lastElementChild);
+        removeColor(i);
+      }
     });
   }
 }
@@ -43,6 +47,12 @@ function focusChoices() {
       }
       radioButtons[i].checked = true;
       choices[i].classList.add("checked");
+      if (radioButtons[i].checked) {
+        if (fieldset.lastElementChild.tagName.toLowerCase() === "p") {
+          // alert("test");
+          fieldset.removeChild(fieldset.lastElementChild);
+        }
+      }
     });
   }
 }
@@ -88,6 +98,7 @@ function removeColor(index) {
   indicator[index].classList.remove("redBg");
   inputText[index].classList.remove("invalid-input");
 }
+
 focusChoices();
 focusText();
 
@@ -131,7 +142,7 @@ form.addEventListener("submit", (event) => {
   for (const elem of inputText) {
     values.push(parseFloat(elem.value));
   }
-  // alert(values);
+
   calcMortage(...values);
   first.classList.add("hidden");
   second.classList.add("shown");

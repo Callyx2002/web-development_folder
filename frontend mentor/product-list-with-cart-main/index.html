@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Product list with cart</title>
+    <script defer src="./script.js" type="module"></script>
+  </head>
+  <body>
+    <section class="first__container">
+      <h1>Desserts</h1>
+      <div class="food__container">
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-waffle-mobile.jpg" alt="" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="1" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Waffle</p>
+              <p class="food__item--description">Waffle with Berries</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="2" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Crème Brûlée</p>
+              <p class="food__item--description">Vanilla Bean Crème Brûlée</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-macaron-mobile.jpg" alt="" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="3" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Macaron</p>
+              <p class="food__item--description">Macaron Mix of Five</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="4" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Tiramisu</p>
+              <p class="food__item--description">Classic Tiramisu</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img
+              src="./assets/images/image-meringue-mobile.jpg"
+              alt="lemon meringe"
+            />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="5" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Baklava</p>
+              <p class="food__item--description">Pistachio Baklava</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img
+              src="./assets/images/image-cake-mobile.jpg"
+              alt="velvet cake"
+            />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="6" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Pie</p>
+              <p class="food__item--description">Lemon Meringue Pie</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-brownie-mobile.jpg" alt="brownie" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="7" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Cake</p>
+              <p class="food__item--description">Red Velvet Cake</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img
+              src="./assets/images/image-panna-cotta-mobile.jpg"
+              alt="panna cotta"
+            />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="8" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Brownie</p>
+              <p class="food__item--description">Salted Caramel Brownie</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+        <figure class="food__item">
+          <div>
+            <img src="./assets/images/image-baklava-mobile.jpg" alt="blakva" />
+          </div>
+          <figcaption>
+            <button class="add-cart" data-number="9" data-clicked="0">
+              <div>
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+              </div>
+              <span>Add to Cart</span>
+            </button>
+            <main>
+              <p class="food__item--name">Panna Cotta</p>
+              <p class="food__item--description">Vanilla Panna Cotta</p>
+              <p class="food__item--price">$<span>6.50</span></p>
+            </main>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="second__container">
+      <div>
+        <div class="empty__order">
+          <h2>Your Cart (0)</h2>
+          <div>
+            <img
+              src="./assets/images/illustration-empty-cart.svg"
+              alt="empty cart"
+            />
+          </div>
+          <p>Your added items will appear here</p>
+        </div>
+        <div class="filled__order">
+          <div class="your__orders">
+            <h2>Your Cart (<span class="quantity--ordered">0</span>)</h2>
+            <div class="active__order">
+              <!-- <div class="active__order--item">
+                <div class="order--item">
+                  <h3>Classic Tiramisu</h3>
+                  <div class="item--descriptions">
+                    <div>
+                      <p><span class="item--amount">1</span>x</p>
+
+                      <p>@ $<span class="actual--amount">15.50</span></p>
+                      <p>$ <span class="variable--amount">5.50</span></p>
+                    </div>
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                  class="cancel"
+                  tabIndex="0"
+                >
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </div>
+              <div class="active__order--item">
+                <div class="order--item">
+                  <h3>Classic Tiramisu</h3>
+                  <div class="item--descriptions">
+                    <div>
+                      <p><span class="item--amount">1</span>x</p>
+
+                      <p>@ $<span class="actual--amount">15.50</span></p>
+                      <p>$ <span class="variable--amount">5.50</span></p>
+                    </div>
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                  class="cancel"
+                  tabIndex="0"
+                >
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </div>
+              <div class="active__order--item">
+                <div class="order--item">
+                  <h3>Classic Tiramisu</h3>
+                  <div class="item--descriptions">
+                    <div>
+                      <p><span class="item--amount">1</span>x</p>
+
+                      <p>@ $<span class="actual--amount">15.50</span></p>
+                      <p>$ <span class="variable--amount">5.50</span></p>
+                    </div>
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                  class="cancel"
+                  tabIndex="0"
+                >
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </div> -->
+            </div>
+          </div>
+          <div class="total__order">
+            <p>Order Total</p>
+            <h4>$<span class="total__money">46.50</span></h4>
+          </div>
+          <div class="carbon__neutral">
+            <img
+              src="./assets/images/icon-carbon-neutral.svg"
+              alt="carbon neutral"
+            />
+            <p>This is a <span>carbon-neutral</span> delivery</p>
+          </div>
+          <button class="place__order btn__order">Confirm Order</button>
+        </div>
+      </div>
+    </section>
+    <section class="overlay"></section>
+    <section class="modal">
+      <img
+        src="./assets/images/icon-order-confirmed.svg"
+        alt="order confirmed"
+      />
+      <h5>Order <br />Confirmed</h5>
+      <p>We hope you enjoyed your food!</p>
+      <div class="successful__order">
+        <div></div>
+        <!-- <div class="successful__order--item">
+          <div class="successful__order--description">
+            <img
+              src="./assets/images/image-brownie-thumbnail.jpg"
+              alt="brownie"
+            />
+            <div class="successful__description--text">
+              <h3>Classic Tiramisu</h3>
+              <div>
+                <p><span class="item--amount">1</span>x</p>
+
+                <p>@ $<span class="actual--amount">15.50</span></p>
+              </div>
+            </div>
+          </div>
+          <p>$<span class="variable--amount">5.50</span></p>
+        </div>
+        <div class="successful__order--item">
+          <div class="successful__order--description">
+            <img
+              src="./assets/images/image-brownie-thumbnail.jpg"
+              alt="brownie"
+            />
+            <div class="successful__description--text">
+              <h3>Classic Tiramisu</h3>
+              <div>
+                <p><span class="item--amount">1</span>x</p>
+
+                <p>@ $<span class="actual--amount">15.50</span></p>
+              </div>
+            </div>
+          </div>
+          <p>$<span class="variable--amount">5.50</span></p>
+        </div>
+        <div class="successful__order--item">
+          <div class="successful__order--description">
+            <img
+              src="./assets/images/image-brownie-thumbnail.jpg"
+              alt="brownie"
+            />
+            <div class="successful__description--text">
+              <h3>Classic Tiramisu</h3>
+              <div>
+                <p><span class="item--amount">1</span>x</p>
+
+                <p>@ $<span class="actual--amount">15.50</span></p>
+              </div>
+            </div>
+          </div>
+          <p>$<span class="variable--amount">5.50</span></p>
+        </div>
+        <div class="successful__order--item">
+          <div class="successful__order--description">
+            <img
+              src="./assets/images/image-brownie-thumbnail.jpg"
+              alt="brownie"
+            />
+            <div class="successful__description--text">
+              <h3>Classic Tiramisu</h3>
+              <div>
+                <p><span class="item--amount">1</span>x</p>
+
+                <p>@ $<span class="actual--amount">15.50</span></p>
+              </div>
+            </div>
+          </div>
+          <p>$<span class="variable--amount">5.50</span></p>
+        </div> -->
+
+        <div class="total__order">
+          <p>Order Total</p>
+          <h4>$<span class="total__money">46.50</span></h4>
+        </div>
+      </div>
+      <button class="btn__order reset">Start New Order</button>
+    </section>
+    <section class="load__page">
+      <div></div>
+    </section>
+  </body>
+</html>
